@@ -5,9 +5,12 @@ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Details from "./components/Detail";
+import Dotenv from "dotenv";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default";
 import Modal from "./components/Modal";
+
+Dotenv.config();
 
 class App extends Component {
   render() {

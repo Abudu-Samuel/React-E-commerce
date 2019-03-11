@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import PaystackButton from "./PaystackButton";
 
-export const CartTotals = ({ value }) => {
+export const CartTotals = ({ value, history }) => {
   const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
   return (
     <Fragment>
@@ -29,6 +30,7 @@ export const CartTotals = ({ value }) => {
               <span className="text-title">total :</span>
               <strong>$ {cartTotal}</strong>
             </h5>
+            <PaystackButton history={history} clearCart={clearCart} />
           </div>
         </div>
       </div>
